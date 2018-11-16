@@ -5,7 +5,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 import FirstPage from './Pages/FirstPage/FirstPage'
 import MoviePage from './Pages/MoviePage/MoviePage'
 import SeriesPage from './Pages/SeriesPage/SeriesPage'
-import EpisodePage from "./Pages/SeriesPage/SeasonPage/EpisodePage/EpisodePage";
+import EpisodePage from "./Pages/SeriesPage/EpisodePage/EpisodePage";
 
 const Main = () => (
   <main>
