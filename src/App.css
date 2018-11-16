@@ -4,7 +4,8 @@
 
 .App-logo {
     animation: App-logo-spin infinite 20s linear;
-    height: 10vmin;
+    height: 10vh;
+    width: 7vw;
 }
 
 .App-header {
@@ -19,10 +20,6 @@
     margin-bottom: 50px;
 }
 
-.App-link {
-    color: #61dafb;
-}
-
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -30,41 +27,4 @@
     to {
         transform: rotate(360deg);
     }
-}
-
-.searchForm {
-  margin: 50px;
-}
-
-.Button {
-    background: #282c34;
-    display: flex;
-    box-sizing: border-box;
-    border: 1px solid whitesmoke;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    font-size: 24px;
-    color: white;
-    height: 20%;
-    min-width: 25%;
-}
-
-.Button[data-size="2"] {
-    height: 40%;
-}
-
-.Button[data-value="null"] {
-    pointer-events: none;
-}
-
-.Button:hover {
-    background: #d7ddd3;
-    color: #282c34;
-    cursor: pointer;
-}
-
-.Button:active {
-    background: #200020;
-    color: white;
 }

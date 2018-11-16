@@ -1,0 +1,49 @@
+.Button {
+    background: #282c34;
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid whitesmoke;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    font-size: 24px;
+    color: white;
+    height: 5vh;
+    margin: 30px auto;
+}
+
+.Button:hover {
+    background: #d7ddd3;
+    color: #282c34;
+    cursor: pointer;
+}
+
+.Button:active {
+    background: #200020;
+    color: white;
+}
+
+.Movies,
+.Series {
+    display: flex;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 5vh;
+    color: black;
+}
+
+.Movies:hover,
+.Series:hover {
+    background-color: #59C3C3;
+    color: white;
+}
+
+.Series {
+    background-color: black;
+    color: white;
+}

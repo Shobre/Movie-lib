@@ -1,0 +1,26 @@
+.Thumbnail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    width: 20vw;
+    margin: 5px;
+    border: 1px solid darkgray;
+}
+
+.Thumbnail:hover {
+    scale: 2;
+}
+
+h1 {
+    font-size: 1.3em;
+    margin: 0 10%;
+    height: 10vh;
+}
+
+img {
+    display: flex;
+    margin: 0 auto;
+    height: 20vh;
+    width: 10vw;
+}
