@@ -25,29 +25,33 @@ class MoviePage extends Component {
           {"<<< BACK <<<"}
         </PrevLink>
         <div className="InfoLayout">
-          <div className="row">
+          <div className="row mobile">
             <div className="column">
               <img src={movie.Poster} alt="" />
             </div>
             <div className="column">
-                <h1 className="">{movie.Title}</h1>
+              <h1 className="">{movie.Title}</h1>
               <div className="row">
                 <h3>{movie.Runtime}</h3>
                 <h3>|</h3>
                 <h3>{movie.Year}</h3>
-              <h3>|</h3>
+                <h3>|</h3>
                 <h3>{movie.Genre}</h3>
-              <h3>|</h3>
+                <h3>|</h3>
                 <h3>{movie.imdbRating}</h3>
               </div>
-                <p>{movie.Plot}</p>
-            <div className="row bottom">
-              <h3>{movie.Director}</h3>
-              <h3>{movie.Actors}</h3>
-              <h3>{movie.Released}</h3>
-              <h3>{movie.DVD}</h3>
-              <h3>{movie.BoxOffice}</h3>
-            </div>
+              <p>{movie.Plot}</p>
+              <div className="row bottom">
+                <h3>{movie.Director}</h3>
+                <h3>|</h3>
+                <h3>{movie.Actors}</h3>
+              <h3>|</h3>
+                <h3>{movie.Released}</h3>
+              <h3>|</h3>
+                <h3>{movie.DVD}</h3>
+              <h3>|</h3>
+                <h3>{movie.BoxOffice}</h3>
+              </div>
             </div>
           </div>
         </div>

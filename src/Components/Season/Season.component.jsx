@@ -8,7 +8,7 @@ class Season extends Component {
           _episodeList = this.props.episodes.map((episode, i) => {
               return <Link key={i} to={"/Series/" + this.props.id + "/Season=" + this.props.i + "/Episode=" + i + "/" + episode.imdbID}>
                   <div className="">
-                      <h1>{episode.Title}</h1>
+                      <p>{episode.Title}</p>
                   </div>
               </Link>;
           })

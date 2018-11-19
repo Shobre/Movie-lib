@@ -42,7 +42,7 @@ class SeriesPage extends Component {
 
     showSeason = () => {
         return <div>
-            <h1>Season {this.state.selectedSeason}</h1>
+            <h2>Season {this.state.selectedSeason}</h2>
             <Season id={this.props.match.params.id} i={this.state.selectedSeason} episodes={this.state.episodes}/>
           </div>;
     }
@@ -51,39 +51,41 @@ class SeriesPage extends Component {
         const series = this.state.seriesInfo;
         return <div className="SeriesPage">
             <PrevLink to={"/"} prevPage={this.props.location.pathname}>
-                {"<<< BACK <<<"}
+              {"<<< BACK <<<"}
             </PrevLink>
             <div className="InfoLayout">
-                <div className="row">
-                    <div className="column">
-                        <img src={series.Poster} alt="" />
-                    </div>
-                    <div className="column">
-                        <h1 className="">{series.Title}</h1>
-                        <div className="row">
-                            <h3>{series.Runtime}</h3>
-                            <h3>|</h3>
-                            <h3>{series.Year}</h3>
-                            <h3>|</h3>
-                            <h3>{series.Genre}</h3>
-                            <h3>|</h3>
-                            <h3>{series.imdbRating}</h3>
-                        </div>
-                        <p>{series.Plot}</p>
-                        <div className="row bottom">
-                            <h3>{series.Director}</h3>
-                            <h3>{series.Actors}</h3>
-                            <h3>{series.Released}</h3>
-                            <h3>{series.DVD}</h3>
-                            <h3>{series.BoxOffice}</h3>
-                        </div>
-                    </div>
+              <div className="row mobile">
+                <div className="column">
+                  <img src={series.Poster} alt="" />
                 </div>
+                <div className="column">
+                  <h1 className="">{series.Title}</h1>
+                  <div className="row">
+                    <h3>{series.Runtime}</h3>
+                    <h3>|</h3>
+                    <h3>{series.Year}</h3>
+                    <h3>|</h3>
+                    <h3>{series.Genre}</h3>
+                    <h3>|</h3>
+                    <h3>{series.imdbRating}</h3>
+                  </div>
+                  <p>{series.Plot}</p>
+                  <div className="row bottom">
+                    <h3>{series.Director}</h3>
+                            <h3>|</h3>
+                    <h3>{series.Actors}</h3>
+                            <h3>|</h3>
+                    <h3>{series.Released}</h3>
+                            <h3>|</h3>
+                    <h3>{series.DVD}</h3>
+                            <h3>|</h3>
+                    <h3>{series.BoxOffice}</h3>
+                  </div>
+                </div>
+              </div>
             </div>
-            {this.createSeasonLink()}
-            <Results>
-              {this.showSeason()}
-            </Results>
+            <div className="row seasonLinks">{this.createSeasonLink()}</div>
+            <Results>{this.showSeason()}</Results>
           </div>;
     }
 }

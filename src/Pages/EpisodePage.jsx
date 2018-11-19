@@ -21,7 +21,7 @@ class EpisodePage extends Component {
           {"<<< BACK <<<"}
         </PrevLink>
         <div className="InfoLayout">
-          <div className="row">
+          <div className="row mobile">
             <div className="column">
               <img src={episode.Poster} alt="" />
             </div>
@@ -39,9 +39,13 @@ class EpisodePage extends Component {
               <p>{episode.Plot}</p>
               <div className="row bottom">
                 <h3>{episode.Director}</h3>
+              <h3>|</h3>
                 <h3>{episode.Actors}</h3>
+              <h3>|</h3>
                 <h3>{episode.Released}</h3>
+              <h3>|</h3>
                 <h3>{episode.DVD}</h3>
+              <h3>|</h3>
                 <h3>{episode.BoxOffice}</h3>
               </div>
             </div>
