@@ -1,12 +1,12 @@
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 const API_URL = "http://www.omdbapi.com/?apikey=" + API_KEY + "&";
 
-export const searchMovies = ( movie ) => {
-    return fetch(API_URL + `type=movie&s=${movie}`)
+export const searchMovies = ( movie, page ) => {
+    return fetch(API_URL + `type=movie&s=${movie}&page=${page}`)
         .then(resp => resp.json())
         .then(data => {
-            console.log(data.Search)
-            return data.Search
+            console.log(data)
+            return data
         })
         .catch(e => {
             console.log(e)
@@ -14,17 +14,17 @@ export const searchMovies = ( movie ) => {
         })
 }
 
-export const searchSeries = ( series ) => {
-    return fetch(API_URL + `type=series&s=${series}`)
-        .then(resp => resp.json())
-        .then(data => {
-        console.log(data.Search);
-        return data.Search;
-        })
-        .catch(e => {
-            console.log(e)
-            return null
-        });
+export const searchSeries = ( series, page ) => {
+    return fetch(API_URL + `type=series&s=${series}&page=${page}`)
+      .then(resp => resp.json())
+      .then(data => {
+        console.log(data);
+        return data;
+      })
+      .catch(e => {
+        console.log(e);
+        return null;
+      });
 }
 
 export const getMovie = ( id ) => {

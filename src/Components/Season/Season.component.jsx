@@ -20,10 +20,7 @@ class Season extends Component {
   }
 
   render() {
-    return (
-      <div>
-        {this.createEpisodeList()}
-      </div>
+    return (this.createEpisodeList()
     );
   }
 }

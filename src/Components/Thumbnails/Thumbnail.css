@@ -2,25 +2,33 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 40vh;
-    width: 20vw;
-    margin: 5px;
-    border: 1px solid darkgray;
+    width: 150px;
+    margin: 10px;
 }
 
-.Thumbnail:hover {
-    scale: 2;
+.Thumbnail:hover img {
+    border: 1px solid cornflowerblue;
+    transition: .3s;
 }
 
 h1 {
-    font-size: 1.3em;
-    margin: 0 10%;
-    height: 10vh;
+    font-size: 1em;
 }
 
 img {
     display: flex;
-    margin: 0 auto;
-    height: 20vh;
-    width: 10vw;
+    margin: 0;
+    height: 200px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+p,
+h1,
+a {
+    color: darkgray;
+    text-align: left;
+    margin: 0;
+    text-decoration: none;
 }

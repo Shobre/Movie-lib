@@ -1,5 +1,27 @@
+.orangeBg {
+    background-color: #E78E4F;
+}
+
+.whiteBg {
+    background-color: #E7DFDC;
+}
+
+.blackBg {
+    background-color: #0C1A1D;
+    color: #E7DFDC;
+}
+
+.greyBg {
+    background-color: #455147;
+}
+
+.pinkBg {
+    background-color: #EFB293;
+}
+
 .App {
     text-align: center;
+    color: #E7DFDC;
 }
 
 .App-logo {
@@ -9,15 +31,17 @@
 }
 
 .App-header {
-    background-color: #282c34;
     min-height: 10vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    margin-bottom: 50px;
+}
+
+footer {
+    min-height: 10vh;
 }
 
 @keyframes App-logo-spin {
@@ -27,4 +51,10 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.Main {
+    display: flex;
+    flex-flow: column;
+    min-height: 80vh;
 }

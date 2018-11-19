@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
-import Season from '../../Components/Season/Season.component'
-import Results from '../../Components/ResultContainer/Results.component'
-import { getSeries, getSeason } from '../../Components/api';
+import Season from '../Components/Season/Season.component'
+import {Results} from '../Components/ResultContainer/Results.component'
+import { getSeries, getSeason } from '../api';
+import { PrevLink } from '../Components/PreviousPage/PrevPage.component'
 
 class SeriesPage extends Component {
     constructor(props) {
@@ -49,13 +49,37 @@ class SeriesPage extends Component {
 
     render() {
         const series = this.state.seriesInfo;
-        return <div>
-            <Link style={{ alignSelf: "left", position: "relative", left: "-500px" }} to={"/"}>
-              {"<<< BACK <<<"}
-            </Link>
-            <h1>{series.Title}</h1>
-            <img src={series.Poster} alt="" />
-            <p>{series.Plot}</p>
+        return <div className="SeriesPage">
+            <PrevLink to={"/"} prevPage={this.props.location.pathname}>
+                {"<<< BACK <<<"}
+            </PrevLink>
+            <div className="InfoLayout">
+                <div className="row">
+                    <div className="column">
+                        <img src={series.Poster} alt="" />
+                    </div>
+                    <div className="column">
+                        <h1 className="">{series.Title}</h1>
+                        <div className="row">
+                            <h3>{series.Runtime}</h3>
+                            <h3>|</h3>
+                            <h3>{series.Year}</h3>
+                            <h3>|</h3>
+                            <h3>{series.Genre}</h3>
+                            <h3>|</h3>
+                            <h3>{series.imdbRating}</h3>
+                        </div>
+                        <p>{series.Plot}</p>
+                        <div className="row bottom">
+                            <h3>{series.Director}</h3>
+                            <h3>{series.Actors}</h3>
+                            <h3>{series.Released}</h3>
+                            <h3>{series.DVD}</h3>
+                            <h3>{series.BoxOffice}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {this.createSeasonLink()}
             <Results>
               {this.showSeason()}

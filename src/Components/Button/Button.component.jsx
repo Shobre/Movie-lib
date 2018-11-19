@@ -11,12 +11,12 @@ export const Button = ({ text, onClick, disabled }) => (
   </div>
 );
 
-export const Toggle = ({ text, onClick, disabled, toggle}) => (
+export const Toggle = ({ onClick, disabled, type}) => (
   <div
     disabled={disabled}
     onClick={onClick}
-    className={toggle}
+    className={type}
   >
-    {text}
+    {type}
   </div>
 );
