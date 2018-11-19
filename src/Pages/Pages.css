@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 5vh 0;
-    min-width: 350px;
+    min-width: 250px;
     max-width: 1200px;
     padding: 10vh 1vw;
     margin: 30px 0;
@@ -62,10 +62,7 @@
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="mobile"] {
-        width: 768px;
-        flex-flow: column;
-    }
-    [class*="row"] img {
         width: 100%;
+        flex-flow: column;
     }
 }
